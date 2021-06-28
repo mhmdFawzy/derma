@@ -1,0 +1,13 @@
+.videoCard {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+  column-gap: 25px;
+
+  &__text {
+    font-size: 70%;
+    font-weight: 500;
+  }
+}

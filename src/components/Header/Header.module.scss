@@ -1,0 +1,28 @@
+@import '../../styles/responsive';
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 1fr;
+
+  > div {
+    display: flex;
+    justify-content: center;
+
+    &:first-of-type {
+      @include for-tablet-up {
+        justify-content: flex-start;
+      }
+    }
+
+    &:nth-child(2) {
+      @include for-tablet-up {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  @include for-tablet-up {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

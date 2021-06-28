@@ -1,0 +1,55 @@
+@import '../../styles/responsive.scss';
+@import '../../styles/colors.scss';
+
+.nav {
+  &__mob {
+    display: block !important;
+    position: absolute !important;
+    right: 0;
+    margin-top: -25px;
+
+    @include for-desktop-up {
+      visibility: hidden !important;
+    }
+  }
+
+  &__list {
+    display: none;
+
+    &Second {
+      background-color: $accent;
+      color: $PRIMARY;
+    }
+
+    &Third {
+      color: $white;
+      background-color: $PRIMARY;
+    }
+
+    @include for-desktop-up {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      height: 71px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+  }
+
+  &__listItem {
+    button {
+      background-color: transparent;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      color: inherit;
+      transition: 0.5s all ease;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        border-bottom: 1px solid currentColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import '../../styles/colors';
+
+.refrence {
+  height: 7vw;
+  display: flex;
+  justify-content: start;
+  background-color: $accent;
+  align-items: center;
+
+  img {
+    max-height: 5vw;
+    max-width: 5vw;
+  }
+}

@@ -1,0 +1,44 @@
+@import '../../styles/colors';
+@import '../../styles/responsive';
+
+.thirdSection {
+  background-color: $lightGrey;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 1fr;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      color: $PRIMARY;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+    }
+  }
+
+  &__duration {
+    padding-top: 21px;
+    font-weight: 200;
+    font-size: 14px;
+  }
+
+  > div {
+    display: flex;
+    justify-content: start;
+
+    &:last-of-type {
+      justify-content: flex-end;
+    }
+  }
+
+  @include for-desktop-up {
+    grid-template-columns: 0.33fr 0.67fr;
+    grid-template-rows: 1fr;
+  }
+}

@@ -1,0 +1,21 @@
+@import '../../styles/colors';
+@import '../../styles/responsive';
+
+.videos {
+  background-color: $lightGrey;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    row-gap: 25px;
+
+    @include for-tablet-up {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      column-gap: 23px;
+      margin-top: 20px;
+    }
+  }
+}

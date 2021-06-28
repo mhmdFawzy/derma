@@ -1,0 +1,15 @@
+@import '../../styles/colors';
+
+.clinicalCard {
+  display: flex;
+  flex-direction: column;
+  background-color: $lightGrey;
+
+  &__content {
+    padding: 2.8vw 8.9vw 2.9vw 3.3vw;
+
+    a {
+      color: $plum;
+    }
+  }
+}

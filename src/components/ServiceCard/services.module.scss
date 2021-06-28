@@ -1,0 +1,11 @@
+@import '../../styles/responsive';
+
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+
+  @include for-phone-only {
+    width: 75vw;
+  }
+}

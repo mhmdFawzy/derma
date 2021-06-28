@@ -1,0 +1,80 @@
+@import '../../styles/colors';
+@import '../../styles/responsive';
+
+.footer {
+  background-color: $PRIMARY;
+  padding-top: 6.9vw;
+  padding-bottom: 3.4vw;
+  color: $white;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+      text-align: end;
+      line-height: 1.8;
+    }
+
+    div {
+      &:first-of-type {
+        width: 85px;
+      }
+    }
+  }
+
+  &__links {
+    display: grid;
+    grid-template-columns: 0.8fr 0.2fr;
+    grid-template-rows: 1fr;
+
+    @include for-phone-only {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    span {
+      text-align: end;
+
+      @include for-phone-only {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+
+    ul {
+      display: grid;
+      width: 100%;
+      justify-content: space-around;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 100px));
+
+      @include for-phone-only {
+        width: 100%;
+        order: 2;
+      }
+
+      li {
+        padding: 5px;
+
+        &:last-of-type {
+          &::after {
+            content: '';
+            border: none;
+          }
+        }
+
+        &::after {
+          content: '';
+          padding-right: 5px;
+          border-right: 1px solid $white;
+        }
+      }
+    }
+  }
+}
